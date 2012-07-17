@@ -5,7 +5,7 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
-    <nav-item with="&Alumno"><ht key="alumno.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Category"><ht key="category.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
   </navigation>
 </def>
@@ -99,7 +99,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="email, telefono" param/>
+            <field-list fields="email, telefono, genero" param/>
           </section>
     </content:>
 
@@ -120,6 +120,129 @@
           </ht>
         </h2>
         <delete-button label="#{ht 'alumno.actions.delete', :default=>['Remove This Alumno']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+
+
+
+<!-- ====== Category Pages ====== -->
+
+<def tag="index-page" for="Category">
+  <page merge title="#{ht 'category.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page category" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="category.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="category.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="category.actions.new">New Category</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Category">
+  <page merge title="#{ht 'category.new.title', :default=>[' New Category'] }">
+    <body: class="new-page category" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="category.new.heading">
+            New Category
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'category.actions.create', :default=>['Create Category']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Category">
+  <page merge title="#{ht 'category.show.title', :default=>['Category'], :name => name(:no_wrapper => true) }">
+
+    <body: class="show-page category" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="category.show.heading" name="#{name(:no_wrapper => true)}">
+                Category <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="category.actions.edit" name="#{name(:no_wrapper => true)}">
+                Edit Category
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="nombre" param/>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Category">
+  <page merge title="#{ht 'category.edit.title', :default=>['Edit Category'], :name => name(:no_wrapper => true) }">
+
+    <body: class="edit-page category" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="category.edit.heading" name="#{name(:no_wrapper => true)}">
+            Edit Category
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'category.actions.delete', :default=>['Remove This Category']}" param/>
       </section>
 
       <section param="content-body">
@@ -228,6 +351,18 @@
               </h3>
 
               <collection:alumnos param/>
+
+              <section param="add-to-collection" if="&can_create?(@curso.alumnos)">
+                <h3 param="add-form-heading">
+                  <ht key="alumno.collection.add_form_heading" count="1">
+                    Add an Alumno
+                  </ht>
+                </h3>
+                <form with="&@alumno || new_for_current_user(@curso.alumnos)" owner="curso" without-cancel param>
+                  <field-list: skip="curso"/>
+                  <submit: label="#{ht 'alumno.actions.add', :default=>['Add'] }"/>
+                </form>
+              </section>
             </section>
           </section>
     </content:>
