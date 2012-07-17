@@ -3,13 +3,15 @@ class Alumno < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    nombre :string, :name => true
+    nombre :string, :required, :name => true
     email  :email_address
     telefono :string
     timestamps
   end
 
   belongs_to :curso
+
+  validates_presence_of :email, :telefono, :curso
 
   # --- Permissions --- #
 
