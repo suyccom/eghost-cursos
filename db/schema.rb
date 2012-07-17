@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717124801) do
+ActiveRecord::Schema.define(:version => 20120717125610) do
+
+  create_table "alumnos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cursos", :force => true do |t|
+    t.string   "titulo"
+    t.date     "fecha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40
