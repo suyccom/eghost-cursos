@@ -1,19 +1,13 @@
-class Alumno < ActiveRecord::Base
+class CursoAlumno < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
   fields do
-    nombre :string, :required, :name => true
-    email  :email_address
-    telefono :string
-    genero enum_string(:masculino, :femenino)
     timestamps
   end
 
-  has_many :curso_alumnos
-  has_many :cursos, :through => :curso_alumnos, :accessible => true
-
-  validates_presence_of :email, :telefono, :curso
+  belongs_to :curso
+  belongs_to :alumno
 
   # --- Permissions --- #
 

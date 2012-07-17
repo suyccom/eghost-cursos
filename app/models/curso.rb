@@ -9,8 +9,9 @@ class Curso < ActiveRecord::Base
     descripcion :text
     timestamps
   end
-
-  has_many :alumnos
+  
+  has_many :curso_alumnos
+  has_many :alumnos, :through => :curso_alumnos, :accessible => true
   has_many :category_cursos
   has_many :categories, :through => :category_cursos, :accessible => true
 
