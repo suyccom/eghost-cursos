@@ -6,6 +6,7 @@ class Alumno < ActiveRecord::Base
     nombre :string, :required, :name => true
     email  :email_address
     telefono :string
+    genero enum_string(:masculino, :femenino)
     timestamps
   end
 

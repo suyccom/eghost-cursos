@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717130128) do
+ActiveRecord::Schema.define(:version => 20120717130530) do
 
   create_table "alumnos", :force => true do |t|
     t.string   "nombre"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120717130128) do
     t.datetime "updated_at"
     t.integer  "curso_id"
     t.string   "telefono"
+    t.string   "genero"
   end
 
   add_index "alumnos", ["curso_id"], :name => "index_alumnos_on_curso_id"
