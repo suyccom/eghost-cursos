@@ -8,6 +8,8 @@ class Curso < ActiveRecord::Base
     timestamps
   end
 
+  has_many :alumnos
+
   # --- Permissions --- #
 
   def create_permitted?

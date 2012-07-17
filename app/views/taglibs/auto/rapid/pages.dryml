@@ -98,6 +98,7 @@
           </header>
 
           <section param="content-body">
+            <field-list fields="nombre, email, curso" param/>
           </section>
     </content:>
 
@@ -217,6 +218,7 @@
           </header>
 
           <section param="content-body">
+            <field-list fields="titulo, fecha" param/>
           </section>
     </content:>
 

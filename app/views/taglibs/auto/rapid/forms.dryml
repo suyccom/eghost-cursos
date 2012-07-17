@@ -3,7 +3,7 @@
 <def tag="form" for="Alumno">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="nombre, email, curso" param/>
     <div param="actions">
       <submit label="#{ht 'alumno.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -15,7 +15,7 @@
 <def tag="form" for="Curso">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="titulo, fecha" param/>
     <div param="actions">
       <submit label="#{ht 'curso.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
