@@ -17,6 +17,9 @@ class Curso < ActiveRecord::Base
 
   children :alumnos
 
+  # Columnas para las búsquedas globales
+  set_search_columns :titulo
+
   # --- Permissions --- #
 
   def create_permitted?

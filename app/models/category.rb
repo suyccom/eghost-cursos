@@ -10,6 +10,9 @@ class Category < ActiveRecord::Base
   has_many :category_cursos
   has_many :cursos, :through => :category_cursos, :accessible => true
 
+  # Columnas para las búsquedas globales
+  set_search_columns :nombre
+
   # --- Permissions --- #
 
   def create_permitted?

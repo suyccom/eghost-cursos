@@ -14,6 +14,9 @@ class Alumno < ActiveRecord::Base
   has_many :cursos, :through => :curso_alumnos, :accessible => true
 
   validates_presence_of :email, :telefono, :curso
+ 
+  # Columnas para las búsquedas globales
+  set_search_columns :nombre, :telefono
 
   # --- Permissions --- #
 
