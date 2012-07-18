@@ -41,5 +41,7 @@ module Cursos
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.hobo.show_translation_keys = false
   end
 end

@@ -4,6 +4,14 @@
 en:
   hello: "Hello world"
 
+  category:
+    nav_item: Categorías
+
+  activerecord:
+    attribute_help:
+      curso:
+        descripcion: Por favor recuerda añadir toda la información que puedas sobre el curso, como horarios, lugar, cómo llegar, transporte etc.
+
 #  attributes:
 #    created_at: Created at
 #    updated_at: Updated at
