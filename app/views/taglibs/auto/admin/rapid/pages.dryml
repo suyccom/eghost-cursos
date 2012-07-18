@@ -35,7 +35,7 @@
 
       <section param="content-body">
         <a action="new" to="&model" param="new-link">
-          <ht key="user.actions.new">New [en.activerecord.models.user]User</ht>
+          <ht key="user.actions.new">New User</ht>
         </a>
 
         <page-nav param="top-page-nav"/>
@@ -52,21 +52,21 @@
 
 
 <def tag="new-page" for="User">
-  <page merge title="#{ht 'user.new.title', :default=>[' New [en.activerecord.models.user]User'] }">
+  <page merge title="#{ht 'user.new.title', :default=>[' New User'] }">
     <body: class="new-page user" param/>
 
     <content: param>
       <section param="content-header">
         <h2 param="heading">
           <ht key="user.new.heading">
-            New [en.activerecord.models.user]User
+            New User
           </ht>
         </h2>
       </section>
 
       <section param="content-body">
         <form param>
-          <submit: label="#{ht 'user.actions.create', :default=>['Create [en.activerecord.models.user]User']}"/>
+          <submit: label="#{ht 'user.actions.create', :default=>['Create User']}"/>
         </form>
       </section>
     </content:>
@@ -75,7 +75,7 @@
 
 
 <def tag="show-page" for="User">
-  <page merge title="#{ht 'user.show.title', :default=>['[en.activerecord.models.user]User'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'user.show.title', :default=>['User'], :name => name(:no_wrapper => true) }">
 
     <body: class="show-page user" param/>
 
@@ -83,7 +83,7 @@
           <header param="content-header">
             <h2 param="heading">
               <ht key="user.show.heading" name="#{name(:no_wrapper => true)}">
-                [en.activerecord.models.user]User <name/>
+                User <name/>
               </ht>
             </h2>
 
@@ -91,7 +91,7 @@
 
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="user.actions.edit" name="#{name(:no_wrapper => true)}">
-                Edit [en.activerecord.models.user]User
+                Edit User
               </ht>
             </a>
           </header>
@@ -106,7 +106,7 @@
 
 
 <def tag="edit-page" for="User">
-  <page merge title="#{ht 'user.edit.title', :default=>['Edit [en.activerecord.models.user]User'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'user.edit.title', :default=>['Edit User'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page user" param/>
 
@@ -114,10 +114,10 @@
       <section param="content-header">
         <h2 param="heading">
           <ht key="user.edit.heading" name="#{name(:no_wrapper => true)}">
-            Edit [en.activerecord.models.user]User
+            Edit User
           </ht>
         </h2>
-        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This [en.activerecord.models.user]User']}" param/>
+        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This User']}" param/>
       </section>
 
       <section param="content-body">

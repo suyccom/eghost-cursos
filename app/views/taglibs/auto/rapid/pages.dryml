@@ -37,7 +37,7 @@
 
       <section param="content-body">
         <a action="new" to="&model" param="new-link">
-          <ht key="alumno.actions.new">New [en.activerecord.models.alumno]Alumno</ht>
+          <ht key="alumno.actions.new">New Alumno</ht>
         </a>
 
         <page-nav param="top-page-nav"/>
@@ -54,21 +54,21 @@
 
 
 <def tag="new-page" for="Alumno">
-  <page merge title="#{ht 'alumno.new.title', :default=>[' New [en.activerecord.models.alumno]Alumno'] }">
+  <page merge title="#{ht 'alumno.new.title', :default=>[' New Alumno'] }">
     <body: class="new-page alumno" param/>
 
     <content: param>
       <section param="content-header">
         <h2 param="heading">
           <ht key="alumno.new.heading">
-            New [en.activerecord.models.alumno]Alumno
+            New Alumno
           </ht>
         </h2>
       </section>
 
       <section param="content-body">
         <form param>
-          <submit: label="#{ht 'alumno.actions.create', :default=>['Create [en.activerecord.models.alumno]Alumno']}"/>
+          <submit: label="#{ht 'alumno.actions.create', :default=>['Create Alumno']}"/>
         </form>
       </section>
     </content:>
@@ -77,16 +77,16 @@
 
 
 <def tag="show-page" for="Alumno">
-  <page merge title="#{ht 'alumno.show.title', :default=>['[en.activerecord.models.alumno]Alumno'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'alumno.show.title', :default=>['Alumno'], :name => name(:no_wrapper => true) }">
 
     <body: class="show-page alumno" param/>
 
     <content: param>
           <header param="content-header">
-            <a:cursos param="parent-link">&laquo; <ht key="alumno.actions.back_to_parent" parent="[en.activerecord.models.curso]Curso" name="&this">Back to <name/></ht></a:cursos>
+            <a:cursos param="parent-link">&laquo; <ht key="alumno.actions.back_to_parent" parent="Curso" name="&this">Back to <name/></ht></a:cursos>
             <h2 param="heading">
               <ht key="alumno.show.heading" name="#{name(:no_wrapper => true)}">
-                [en.activerecord.models.alumno]Alumno <name/>
+                Alumno <name/>
               </ht>
             </h2>
 
@@ -94,7 +94,7 @@
 
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="alumno.actions.edit" name="#{name(:no_wrapper => true)}">
-                Edit [en.activerecord.models.alumno]Alumno
+                Edit Alumno
               </ht>
             </a>
           </header>
@@ -109,7 +109,7 @@
 
 
 <def tag="edit-page" for="Alumno">
-  <page merge title="#{ht 'alumno.edit.title', :default=>['Edit [en.activerecord.models.alumno]Alumno'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'alumno.edit.title', :default=>['Edit Alumno'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page alumno" param/>
 
@@ -117,10 +117,10 @@
       <section param="content-header">
         <h2 param="heading">
           <ht key="alumno.edit.heading" name="#{name(:no_wrapper => true)}">
-            Edit [en.activerecord.models.alumno]Alumno
+            Edit Alumno
           </ht>
         </h2>
-        <delete-button label="#{ht 'alumno.actions.delete', :default=>['Remove This [en.activerecord.models.alumno]Alumno']}" param/>
+        <delete-button label="#{ht 'alumno.actions.delete', :default=>['Remove This Alumno']}" param/>
       </section>
 
       <section param="content-body">
@@ -158,7 +158,7 @@
 
       <section param="content-body">
         <a action="new" to="&model" param="new-link">
-          <ht key="category.actions.new">New [en.activerecord.models.category]Category</ht>
+          <ht key="category.actions.new">New Category</ht>
         </a>
 
         <page-nav param="top-page-nav"/>
@@ -175,21 +175,21 @@
 
 
 <def tag="new-page" for="Category">
-  <page merge title="#{ht 'category.new.title', :default=>[' New [en.activerecord.models.category]Category'] }">
+  <page merge title="#{ht 'category.new.title', :default=>[' New Category'] }">
     <body: class="new-page category" param/>
 
     <content: param>
       <section param="content-header">
         <h2 param="heading">
           <ht key="category.new.heading">
-            New [en.activerecord.models.category]Category
+            New Category
           </ht>
         </h2>
       </section>
 
       <section param="content-body">
         <form param>
-          <submit: label="#{ht 'category.actions.create', :default=>['Create [en.activerecord.models.category]Category']}"/>
+          <submit: label="#{ht 'category.actions.create', :default=>['Create Category']}"/>
         </form>
       </section>
     </content:>
@@ -198,7 +198,7 @@
 
 
 <def tag="show-page" for="Category">
-  <page merge title="#{ht 'category.show.title', :default=>['[en.activerecord.models.category]Category'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'category.show.title', :default=>['Category'], :name => name(:no_wrapper => true) }">
 
     <body: class="show-page category" param/>
 
@@ -206,7 +206,7 @@
           <header param="content-header">
             <h2 param="heading">
               <ht key="category.show.heading" name="#{name(:no_wrapper => true)}">
-                [en.activerecord.models.category]Category <name/>
+                Category <name/>
               </ht>
             </h2>
 
@@ -214,7 +214,7 @@
 
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="category.actions.edit" name="#{name(:no_wrapper => true)}">
-                Edit [en.activerecord.models.category]Category
+                Edit Category
               </ht>
             </a>
           </header>
@@ -229,7 +229,7 @@
 
 
 <def tag="edit-page" for="Category">
-  <page merge title="#{ht 'category.edit.title', :default=>['Edit [en.activerecord.models.category]Category'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'category.edit.title', :default=>['Edit Category'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page category" param/>
 
@@ -237,10 +237,10 @@
       <section param="content-header">
         <h2 param="heading">
           <ht key="category.edit.heading" name="#{name(:no_wrapper => true)}">
-            Edit [en.activerecord.models.category]Category
+            Edit Category
           </ht>
         </h2>
-        <delete-button label="#{ht 'category.actions.delete', :default=>['Remove This [en.activerecord.models.category]Category']}" param/>
+        <delete-button label="#{ht 'category.actions.delete', :default=>['Remove This Category']}" param/>
       </section>
 
       <section param="content-body">
@@ -278,7 +278,7 @@
 
       <section param="content-body">
         <a action="new" to="&model" param="new-link">
-          <ht key="curso.actions.new">New [en.activerecord.models.curso]Curso</ht>
+          <ht key="curso.actions.new">New Curso</ht>
         </a>
 
         <page-nav param="top-page-nav"/>
@@ -295,21 +295,21 @@
 
 
 <def tag="new-page" for="Curso">
-  <page merge title="#{ht 'curso.new.title', :default=>[' New [en.activerecord.models.curso]Curso'] }">
+  <page merge title="#{ht 'curso.new.title', :default=>[' New Curso'] }">
     <body: class="new-page curso" param/>
 
     <content: param>
       <section param="content-header">
         <h2 param="heading">
           <ht key="curso.new.heading">
-            New [en.activerecord.models.curso]Curso
+            New Curso
           </ht>
         </h2>
       </section>
 
       <section param="content-body">
         <form param>
-          <submit: label="#{ht 'curso.actions.create', :default=>['Create [en.activerecord.models.curso]Curso']}"/>
+          <submit: label="#{ht 'curso.actions.create', :default=>['Create Curso']}"/>
         </form>
       </section>
     </content:>
@@ -318,7 +318,7 @@
 
 
 <def tag="show-page" for="Curso">
-  <page merge title="#{ht 'curso.show.title', :default=>['[en.activerecord.models.curso]Curso'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'curso.show.title', :default=>['Curso'], :name => name(:no_wrapper => true) }">
 
     <body: class="show-page curso" param/>
 
@@ -326,7 +326,7 @@
           <header param="content-header">
             <h2 param="heading">
               <ht key="curso.show.heading" name="#{name(:no_wrapper => true)}">
-                [en.activerecord.models.curso]Curso <name/>
+                Curso <name/>
               </ht>
             </h2>
 
@@ -334,7 +334,7 @@
 
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="curso.actions.edit" name="#{name(:no_wrapper => true)}">
-                Edit [en.activerecord.models.curso]Curso
+                Edit Curso
               </ht>
             </a>
           </header>
@@ -358,7 +358,7 @@
 
 
 <def tag="edit-page" for="Curso">
-  <page merge title="#{ht 'curso.edit.title', :default=>['Edit [en.activerecord.models.curso]Curso'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'curso.edit.title', :default=>['Edit Curso'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page curso" param/>
 
@@ -366,10 +366,10 @@
       <section param="content-header">
         <h2 param="heading">
           <ht key="curso.edit.heading" name="#{name(:no_wrapper => true)}">
-            Edit [en.activerecord.models.curso]Curso
+            Edit Curso
           </ht>
         </h2>
-        <delete-button label="#{ht 'curso.actions.delete', :default=>['Remove This [en.activerecord.models.curso]Curso']}" param/>
+        <delete-button label="#{ht 'curso.actions.delete', :default=>['Remove This Curso']}" param/>
       </section>
 
       <section param="content-body">
@@ -416,7 +416,7 @@
 
         <div param="new-form">
           <h3 param="new-form-heading">
-            <ht key="user.form.new.heading">New [en.activerecord.models.user]User</ht>
+            <ht key="user.form.new.heading">New User</ht>
           </h3>
           <form with="&@invalid_record || new_for_current_user(User)" param/>
         </div>
@@ -428,21 +428,21 @@
 
 
 <def tag="new-page" for="User">
-  <page merge title="#{ht 'user.new.title', :default=>[' New [en.activerecord.models.user]User'] }">
+  <page merge title="#{ht 'user.new.title', :default=>[' New User'] }">
     <body: class="new-page user" param/>
 
     <content: param>
       <section param="content-header">
         <h2 param="heading">
           <ht key="user.new.heading">
-            New [en.activerecord.models.user]User
+            New User
           </ht>
         </h2>
       </section>
 
       <section param="content-body">
         <form param>
-          <submit: label="#{ht 'user.actions.create', :default=>['Create [en.activerecord.models.user]User']}"/>
+          <submit: label="#{ht 'user.actions.create', :default=>['Create User']}"/>
         </form>
       </section>
     </content:>
@@ -451,7 +451,7 @@
 
 
 <def tag="show-page" for="User">
-  <page merge title="#{ht 'user.show.title', :default=>['[en.activerecord.models.user]User'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'user.show.title', :default=>['User'], :name => name(:no_wrapper => true) }">
 
     <body: class="show-page user" param/>
 
@@ -459,7 +459,7 @@
           <header param="content-header">
             <h2 param="heading">
               <ht key="user.show.heading" name="#{name(:no_wrapper => true)}">
-                [en.activerecord.models.user]User <name/>
+                User <name/>
               </ht>
             </h2>
 
@@ -467,7 +467,7 @@
 
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="user.actions.edit" name="#{name(:no_wrapper => true)}">
-                Edit [en.activerecord.models.user]User
+                Edit User
               </ht>
             </a>
           </header>
@@ -482,7 +482,7 @@
 
 
 <def tag="edit-page" for="User">
-  <page merge title="#{ht 'user.edit.title', :default=>['Edit [en.activerecord.models.user]User'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'user.edit.title', :default=>['Edit User'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page user" param/>
 
@@ -490,10 +490,10 @@
       <section param="content-header">
         <h2 param="heading">
           <ht key="user.edit.heading" name="#{name(:no_wrapper => true)}">
-            Edit [en.activerecord.models.user]User
+            Edit User
           </ht>
         </h2>
-        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This [en.activerecord.models.user]User']}" param/>
+        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This User']}" param/>
       </section>
 
       <section param="content-body">
