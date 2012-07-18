@@ -1,0 +1,5 @@
+<index-page>
+  <count: replace>
+    Hay <%= @total_cursos %> cursos y <%= @total_alumnos %> alumnos en el sistema
+  </count:>
+</index-page>

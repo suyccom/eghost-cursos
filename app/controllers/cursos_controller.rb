@@ -4,4 +4,10 @@ class CursosController < ApplicationController
 
   auto_actions :all
 
+  def index
+    @total_alumnos = Alumno.count
+    @total_cursos = Curso.count
+    hobo_index
+  end
+
 end
