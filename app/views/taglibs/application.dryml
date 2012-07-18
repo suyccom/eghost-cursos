@@ -18,7 +18,7 @@
   </old-page>
 </extend>
 
-
+<!-- Card de cada alumno -->
 <def tag="card" for="Alumno">
   <card class="alumno" param="default" merge>
     <header: param>
@@ -29,4 +29,15 @@
       Email: <this.email/>
     </body:>
   </card>
+</def>
+
+
+<!-- Menú de navegación -->
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Inicio</nav-item>
+    <nav-item with="&Alumno" if="&logged_in?"><ht key="alumno.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Category"><ht key="category.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+  </navigation>
 </def>
