@@ -38,15 +38,13 @@ Cursos::Application.routes.draw do
 
 
   # Resource routes for controller "alumnos"
+  get 'alumnos(.:format)' => 'alumnos#index', :as => 'alumnos'
   get 'alumnos/new(.:format)', :as => 'new_alumno'
   get 'alumnos/:id/edit(.:format)' => 'alumnos#edit', :as => 'edit_alumno'
   get 'alumnos/:id(.:format)' => 'alumnos#show', :as => 'alumno', :constraints => { :id => %r([^/.?]+) }
   post 'alumnos(.:format)' => 'alumnos#create', :as => 'create_alumno'
   put 'alumnos/:id(.:format)' => 'alumnos#update', :as => 'update_alumno', :constraints => { :id => %r([^/.?]+) }
   delete 'alumnos/:id(.:format)' => 'alumnos#destroy', :as => 'destroy_alumno', :constraints => { :id => %r([^/.?]+) }
-
-  # Owner routes for controller "alumnos"
-  post 'cursos/:curso_id/alumnos(.:format)' => 'alumnos#create_for_curso', :as => 'create_alumno_for_curso'
 
 
   # Resource routes for controller "cursos"
