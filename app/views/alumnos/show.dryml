@@ -1,0 +1,3 @@
+<show-page>
+  <field-list: skip="genero" tag="editor"/>
+</show-page>
