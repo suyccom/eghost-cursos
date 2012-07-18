@@ -1,5 +1,5 @@
 Cursos::Application.routes.draw do
-  root :to => 'front#index'
+  root :to => 'cursos#index'
 
   match 'search' => 'front#search', :as => 'site_search'
 

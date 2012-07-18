@@ -35,7 +35,6 @@
 <!-- Menú de navegación -->
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
-    <nav-item href="#{base_url}/">Inicio</nav-item>
     <nav-item with="&Alumno" if="&logged_in?"><ht key="alumno.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Category"><ht key="category.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
